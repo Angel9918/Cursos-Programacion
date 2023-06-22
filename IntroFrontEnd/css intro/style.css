@@ -1,0 +1,290 @@
+body {
+    color: black;
+}
+
+/* Se utiliza el '#' para especificarle a css que la propiedad se va aplicar a un etiqueta con id definiendo su nombre */
+#titulo {
+    color: tomato
+}
+
+/* Se utiliza el '.nombre' para aplicar la propiedad a una clase que contenga el nombre especificado */
+/* Se utiliza el 'p.nombre' para aplicar la propiedad a una clase que contenga el nombre especificado en todas las etiquetas que coincidan */
+p.texto {
+    color: purple
+}
+
+p.especial {
+    color: red;
+}
+
+/* Esta estructura permite asignar un color a todas las etiquetas p o segun se especifique que se encuentren dentro de un div*/
+div p {
+    color: blue;
+}
+
+/* Esta estructura permite asignar un color a todas las etiquetas h2, h3 o segun se especifique que se encuentren dentro de un div*/
+div h2,
+h3 {
+    color: brown
+}
+
+/* Esta estructura permite cambiar el tamaño de fuente de todas las etiquetas dado que es la estructura de un selector universal*/
+/* Solo aplica las propiedades ingresadas a las etiquetas que a las que no se les ha defnido ningun valor previamente a traves de otro selector*/
+* {
+    font-size: 24px;
+    /* color: black;*/
+}
+
+/*
+.color {
+    color: #eee;
+    color: #000000; /*Hexagesimal
+    /* Se pueden configurar etiquetas de color utilizando # + [0,f] donde 0 es ausencia de color y f es presencia de color */
+/* En el metodo hexagesimal se utilizan 6 numeros combinados con letras y en parejas representan el rgb 
+}
+.color {
+    color: rgb(0, 0, 0);
+    /* Conveción rgb */
+/* Se pueden cambiar los numeros del 0 al 255
+}
+*/
+
+.color {
+    /* border: 3px red ridge; */
+    /* Grosor, color, tipo */
+    /*
+            dotted
+            dashed
+            solid
+            double
+            groove
+            ridge
+            inset
+            outset
+            none
+            hidden
+        */
+    border-style: solid;
+    border-color: blue;
+    border-radius: 5px;
+    border-width: 2rem;
+    /* 
+        px : pixel
+        cm : centimetro
+        mm : milimetro
+        in : pulgada
+        pt : punto, 1/72 de pulgada
+        pc : 12 puntos
+        em :  relativo al tamaño de la fuente del elemento en particular
+        rem : relativo al tamaño de la fuente del elemento raiz, 16 pixeles
+    */
+}
+
+#fondo {
+    background-color: rgba(255, 0, 0);
+    /* Permite darle opacidad al color con el que se queire trabajar desde 1 como salido hasta 0 como transparente */
+    /* opacity: 1; */
+    /* Cambia la opacidad del elemento completo */
+    height: 300px;
+    background-image: url('Bartcopy.png');
+    background-size: 100px 100px;
+    /* Permite redimencionar la imagen de fondo, se puede segun las propiedades preestablecidas o especificandoles un tamaño (ancho alto) */
+    /*
+    cover : Utiliza el ancho disponible proporcional al espacio, segun el tamaño del explorador 
+    auto : Detecta el tamaño de la imagen automaticamente
+    contain : Contiene la imagen dentro de las dimensiones que se le asignan al elemento 
+    */
+    background-repeat: repeat-y;
+    /*
+    not-repeat : Impide que la imagen se repita la cantidad de veces necesarias para cubrir el espacio
+    repeat-x : Rpite la imagen tantas veces como sea necesario segun el tamaño del espacio en el eje x
+    repeat-y : Rpite la imagen tantas veces como sea necesario segun el tamaño del espacio en el eje y
+    */
+    background-position: left top;
+    /*posicion horizontal (left, rigth, center)
+    y posicion vertical (top, center, bottom) 
+    tambien se pueden agregar valores 
+    */
+    background: #f00 url(Bartcopy.png) repeat-y center bottom / 100px 100px;
+    /* Se debe definir primero la propiedad background y despues la propiedad de background-size para que sea tomada en cuenta */
+}
+
+.margen {
+    background-color: chocolate;
+    margin: 15px 20px 25px 30px;
+    padding: 30px 25px 20px 15px;
+    border: solid 3px black;
+    /* alto, derecha, bajo, izquierda */
+    /* Se puede asignar un valor general al ingresar un solo valor a la propiedad */
+    /* Si se agregan dos valores se ajusta el margen lateral y el margen superior e inferior */
+    height: 100px;
+    width: 100px;
+    overflow: visible;
+    /* Esconde todo el contenido que no se ajuste dentro del objeto */
+    /* 
+    visible: Permite ver los valores cuando exceden el tamaño del objeto que los contiene
+    hidden:  Esconde los valores cuando exceden el tamaño del objeto que los contiene
+    scroll : Agrega barras laterales para moverse dentro del objeto para ver todo el contenido
+    */
+    outline: 1px solid red;
+    /* Borde externo antes del margin */
+}
+
+.text {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    /* Permite ubicar el texto centrado, justificado, derecha o izquierda */
+    /* 
+    center  : Centrado
+    justify : Justificado
+    right : Derecha
+    left : Izquierda
+    */
+    text-decoration: overline;
+    /* Inica decoracion al texto */
+    /* 
+        none
+        underline : linea inferior
+        line-through : linea tachando
+        overline : linea superior
+    */
+    text-shadow: 3px 5px 3px blue;
+    /* Asigna un sombreado */
+    /* movimiento a la derecha, movimietno abajo, cantidad de difuminado o blur( opcional), color(opcional) */
+}
+
+/* Se tiene que mantener el siguiente orden  */
+a:link {
+    color: purple;
+    /* Indica cuando el boton no ha sido seleccionado */
+}
+
+a:visited {
+    color: yellowgreen;
+    /* Aplica el estilo a los links que ya han sido visitados */
+}
+
+a:hover {
+    color: magenta;
+    /* Cuando se pasa el mouse sobre el link */
+}
+
+a:active {
+    color: hotpink;
+    /* Cuando se clikea el link */
+}
+
+ul {
+    background-color: cyan;
+    list-style-type: disc;
+    /* padding-left: 0; */
+    /* list-style-position: inside; */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* Quita los espacios entre las filas y celdas de los bordes de la tabla */
+}
+
+th,
+td {
+    border: solid 1px green;
+    padding: 5px;
+}
+
+th {
+    background-color: tomato;
+    color: white;
+    text-align: left;
+    /* Afecta la linea de cabecera de la tabla */
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+
+    /* Permite seleccionar elementos particulares */
+    /* Debe colocarse antes de hover para que aplique la propiedad del color en las filas */
+    /* 
+    even : Elementos impares
+    odd : Elementos pares
+*/
+}
+
+tr:hover {
+    background-color: #aaa;
+    cursor: pointer;
+    /* Cambia la forma del cursor a la mano selectora */
+}
+
+span {
+    display: block;
+    /* display: none;
+    visibility: hidden; 
+    Estas propiedades esconden los elementos para que no se muestren en la pagina
+    */
+    max-width: 300px;
+    /* Asigna un ancho a un objeto y si se reduce el tamaño del explorador de igual manera reduce su tamaño */
+    background-color: chocolate;
+}
+
+.inline {
+    display: inline;
+}
+
+#position {
+    position: static;
+    /* 
+    static: Valor por defecto
+    relative : Posicion relativa a donde deberia estar el elemento  
+    fixed : indica una posicion con respecto a lo que se ve en el explorador, manteniendo el texto en la posicion incluso si se scrolea
+    absolute : Posiciona relativamente al elemento padre ams cercano, en su defecto el elemento padre
+    sticky : Mezcla entre relative y fixed
+*/
+    left: 20px;
+    /* top: 25px; */
+    /* Hace que se muevan segun a una distancia dada */
+}
+
+.left {
+    float: left;
+    /* Hace que los objetos se acomoden hacia una posicion segun se le indique un ancho y alto */
+    width: 200px;
+    height: 200px;
+}
+
+.right {
+    float: right;
+}
+
+.container {
+    height: 200px;
+}
+
+.column {
+    border: solid 0px #ddd;
+    border-radius: 5px;
+    margin: 0;
+    padding: 10px 0;
+    width: 33.3%;
+}
+
+.inline-block {
+    display: inline-block;
+    /* Permite asignar un ancho fijo a los elementos */
+    /* Para los elemementos con propiedad inline no se les puede asignar height ni width */
+    height: 55px;
+    background-color: tomato;
+}
+
+.center {
+    padding: 50px 0;
+    /* Centrado vertical */
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    /* vertical y horizontal */
+    /* Centrado horizontal */
+    background-color: aqua;
+    /* Para centrar objetos es necesario indicar siempre un ancho */
+}

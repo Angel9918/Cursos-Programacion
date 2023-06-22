@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mi primera web</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<!--La etiqueta style permite asignar un estilo a los elementos mencionados, como borde en pixeles px-->
+
+<body>
+    <!--Etiqueta para crear una tabla-->
+    <!--Para agregar un borde a la tabla se puede usar la etiqueta style-->
+    <table style="width: 500px;"><!--Se indica el grosor de la linea, el tipo y el color-->
+        <!--dentro de table se pueden agregar caracteristicas style="border: 1px solid black;" Permite asignar un estilo a los elementos mencionados-->
+        <thead><!--Permite agrupar elementos que se encuentran en la cabecera de las tablas-->
+            <tr><!--Etiqueta para crear una fila dentro de la tabla-->
+                <th>Precio</th><!--Cabecera de una fila, centra el texto-->
+                <th>Producto</th>
+            </tr>
+        </thead>
+        <tbody><!--Permite agrupar las filas que pertenecen al cuerpo de la tabla-->
+            <tr>
+                <!--Permite definir elementos estandar que se encuentran dentro de las celdas de la tabla, alineando los valores a la izquierda -->
+                <!--Segun se agregan etiquetas td se asignan van creando asignando los valores a cada columna, por ende se pueden tener mas filas que columnas-->
+                <td>Hola beats</td>
+                <td>es gratis</td>
+            </tr>
+            <tr>
+                <!--Para agregar nuevas filas a la tabla, es necesario abrir tantas etiquetas tr y td como se requiera, teniendo en cuanta que la cantidad de datos no supere la cantidad de columnas-->
+                <td>Chancho obsesionado</td>
+                <td>Cuesta caro</td>
+            </tr>
+            <tr>
+                <td>Mirar llover cuando hay tormenta</td>
+                <td>no tiene precio</td>
+            </tr>
+        </tbody>
+        <tfoot><!--Permite agregar valores creando una celda final de la tabla-->
+            <td></td>
+            <td>Total: Mucha plata</td>
+        </tfoot>
+    </table>
+    <ul>
+        <li>Elemento 1</li> <!--Item de lista-->
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ul><!--ul significa lista no ordena, indexa los elementos con puntos negros como viñetas-->
+
+
+    <ol>
+        <!--Para decidir que valor se quiere que tenga el valor desde el valor que se quiera en el elemento que se quiera se indica con la etiqueta value="numero"-->
+        <li value="50">Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>Elemento 5
+            <ol><!--Esta estructura permite anidar listas de listas-->
+                <li style="list-style-type: lower-alpha;">sub elemento 1</li>
+                <!--Para cambiar el tipo de numeracion que tiene cada elemto se usa la etiqueta style="style="list-style-type:'seleccion de tipo'"-->
+                <!--Para cambiar en tdos los elementos es necesario agregar la etiqueta a cada elemento que se quiera cambiar-->
+                <li style="list-style-type: lower-alpha;">sub elemento 2</li>
+                <li style="list-style-type: lower-alpha;">sub elemento 3</li>
+            </ol>
+        </li>
+    </ol><!--ol significa lista ordena, indexa los elementos enumerados de manera incremental-->
+
+
+
+
+
+    <form action="/formulario" method="post">
+        <!--metodo "get" asigna una url mas larga y tiene limite de 250 caracteres y "post" asigna una url corta con posibilidad de manejar mayor cantidad de caracteres pero depende de una encriptacion para que no se revelen los datos-->
+        <label for="nombre">Nombre</label>
+        <!--label asigna un nombre al input que se quiere mostrar-->
+        <!--for="identificador foco" permite ingresar al input cuando se selecciona el label-->
+        <input value="" type="text" id="nombre" name="nombre" placeholder="Nombre" />
+        <!--type="" cambia el comportamiento de la etiqueta input segun el tipo que se le asigne, submit(boton de enviar), text(ingresa texto), email(email), password(contraseña en ***), radio(seleccion de opciones), checkbox(casilla sleccionable), file(permite seleccionar archivos) -->
+        <!--id="identificador foco" permite direccionar al campo que se quiere dar foco cuando se selecciona el nombre del label, por eso tiene el mismo nombre en la etiqueta for-->
+        <!--name="" permite al servidor interpretar los datos del formulario segun el nombre que se le asigne, se conoce como llave-valor, en el que la llave es la etiqueta y el valor es el que se le ingresa-->
+        <!--placeholder="" permite asignar un valor guia a la etieuta de input para identificar el tipo de informacion que se quiere obtener o debe escribirse dentro del espacio-->
+        <br>
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Apellido" />
+        <br>
+        <label for="comentario">Comentario</label>
+        <br>
+        <textarea cols="50" rows="10" id="comentario" name="comentario"
+            placeholder="Ingrese comentario">Valor por defecto</textarea>
+        <!--rows y cols permiten asignar un tamaño especifico en numero de lineas y columnas al espacio de la caja de texto-->
+        <!--Etiqueta value="valor por defecto" asina un valor por defecto cuando no se ha ingresado ninguno, aplica para las etiquetas inputs y en textarea se escriben entre la apertura y cierre de la etiqueta-->
+        <br>
+        <!--Etiquetas button permiten agregar etiquetas dentro de estas-->
+        <button type="button"><!--img src=imagenes/Bart.png--> Tipo boton JS</button>
+        <button type="reset">Tipo reset</button>
+        <button type="submit">Tipo submit</button>
+        <!--Se recomiendo utilizar este tipo de etiqueta button, hay tres tipos, button que depende de JS, reset que deja el formulario con valores iniciales, submit que envia el formulario a la base especificada en la ruta de action-->
+        <!--<input type="submit" /> Este tipo de input no es muy recomendado debido a que no se pueden agregar etiquetas dentro-->
+        <!--se debe especificar con la etiqueta action a donde se va a dirigir la inforamcion al presionar enviar-->
+
+    </form>
+    <h1>Mi primer heading</h1> <!--Etiqueta para indexar contenido en el motor de busqueda, indica titulos-->
+    <h2>Mi segundo heading</h2> <!--Permite indexar titulos, subtitulos y demas segun lo que se quiera-->
+    <h3>Mi tercer heading</h3>
+    <h4>Mi cuarto heading</h4>
+    <h5>Mi quinto heading</h5>
+    <h6>Mi heading</h6>
+    <p>Chanchito feliz esta muy feliz!</p> <!--Permite indexar parrafos-->
+    <p>Chanchito triste esta muy triste!</p> <!--Permite indexar una nueva linea de parrafo-->
+    <hr> <!--Permite separar las diferentes secciones de la pagina web imprimiendo una linea-->
+    <h2>Estado de Chanchito</h2> <!--Permite indexar titulos, subtitulos y demas segun lo que se quiera-->
+    <p>Un poco de texto mas</p>
+    <p> <!--span permite identificar etiquetas html dentro de otras etiquetas que al mostrar en el explorador se veran diferentes-->
+        Este texto es <span style="color: magenta">mucho mas largo</span>
+        y es para mostrar<br>
+        <!--Permite realizar saltos de linea con el texto que se encuentra delante de la etiqueta-->
+        la etiqueta de span!
+        <!--Cada etiqueta br agrega una nueva linea, si se ponen seguidas agraga un linea en blanco entre los textos-->
+    </p>
+    <a target="_blank" href="https://www.google.com">Ir a google</a>
+    <!--Etiqueta de hipervinculo, anchor carga el hipervinculo en la misma ventana-->
+    <!--href="ruta" Se utiliza para ingresar la url a la que se quiere dirigir el hipervinculo-->
+    <!--target="_blank" Se utiliza para que al seleccionar el hipervinculo, cargue en una nueva ventana-->
+    <img src="imagenes/Bart.png" heigth="400" width="300" />
+    <!--Etiqueta para agregar imagenes, no es necesario cerrarla como las demas, se puede agregar un "/" al final del nombre dentro de los signos <>-->
+    <!--La etiqueta src="ruta" se usa para indexar imagenes y que se muestren en la aplicación-->
+    <!--La etiqueta width="tamaño" se usa para modificar el ancho de las imagenes, se mide en pixeles-->
+    <!--La etiqueta heigth="tamaño" se usa para modificar el alto de las imagenes, se mide en pixeles-->
+    <!--Se recomiendo solo aplicar una de las etiquetas para modificar el tamaño, dado que si solo se ingresa una, la otra se ajusta automaticamente-->
+    <!--<form> form permite agregar los campos para la recoleecion de informacion del usuario-->
+    <!---    <input /> input permite recopilar informacion del usuario-->
+    <!---</form>-->
+</body>
+
+</html>

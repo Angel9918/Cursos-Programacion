@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="titulo">Blog de mi persona</h1>
+        <!--id asigna un identificador unico a la etiqueta, si se quiere usar el mismo nombre en varias etiquetas se debe usar class-->
+    </header>
+    <div><!--Permite agrupar y dividir las secciones de la pagina, cumple la misma funcion que article o section-->
+        <p>Soy un parrafo dentro de un div</p>
+    </div>
+
+    <!--Agrupa links, imagenes o logos de una pagina, una etiqueta header no es anidable en otra header o en footer-->
+    <section>
+        <article class="post">
+            <h2>Titulo del post</h2>
+            <p>Descripcion del post</p>
+            <img src="imagenes/Bart.png" width="400" />
+            <p>Texto del articulo como texto de prueba</p>
+        </article class="post">
+        <!--Define contenido independiente para identificar información de manera independiente-->
+        <article>
+            <h2>Titulo del post 2</h2>
+            <p>Descripcion de la publicacion</p>
+            <img src="imagenes/Programacion.png" width="400" />
+            <p>Texto del articulo como texto de prueba</p>
+        </article>
+        <article class="post">
+            <h2>Titulo del post 3</h2>
+            <p>Descripcion de la publicacion 2</p>
+            <img src="imagenes/Learn.png" width="400" />
+            <p>Texto del articulo como imagen para aprender a programar</p>
+        </article>
+    </section>
+    <!--Se utiliza apra definir secciones dentro de la pagina web-->
+    <footer>
+        <a href="#titulo">Ir al titulo</a>
+        <br />
+        <a href="mailto:correodecontacto@gmail.com">correodecontacto@gmail.com</a>
+        <!--Permite definir datos de contacto interactivos-->
+        <br />
+        <a href="mailto:correodecontacto@gmail.com">Contacto aca</a>
+        <!--Permite definir datos de contacto interactivos-->
+        <p>Copyright 2023</p>
+    </footer>
+    <!--Permtite agregar un pie de pagina a la pagina web-->
+</body>
+
+</html>
